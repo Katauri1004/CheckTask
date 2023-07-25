@@ -1,17 +1,30 @@
-﻿void PrintArray (string [] arr)
+﻿using System.Drawing;
+
+void PrintArray (string [] arr)
 {
+    Console.Write(" [ ");
     for (int i = 0; i < arr.Length; i++) 
     {
         Console.Write ($"[{arr [i]}]  ");
     
     }
+    Console.Write(" ] ");
 }
-string [] array = new string [6] {"if", "slame", "tap", "global", "supreme", "OK"};
+string [] array = new string [6] {"dfssdf", "slame", "tapfds", "global", "supreme", "OfdsfsdK"};
 PrintArray (array);
 
 void CreateFillAndPrintNewArray (string [] arr)
-{   int IndArr2 = 0;
-    string [] arr2 = new string [6];
+{   
+    int size = 0;
+    for (int j = 0; j< arr.Length; j++)
+    {
+        if (arr[j].Length<=3)
+        {
+            size++;
+        }
+    }
+    int IndArr2 = 0;
+    string [] arr2 = new string [size];
 
     for (int i = 0; i < arr.Length; i++)
     {
@@ -19,10 +32,10 @@ void CreateFillAndPrintNewArray (string [] arr)
         {
             arr2[IndArr2] = arr[i];
             IndArr2++;
+            
         }
-
-        
     }
+    
     PrintArray(arr2);
 }
 Console.WriteLine("");
