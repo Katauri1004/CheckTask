@@ -10,11 +10,6 @@ void PrintArray (string [] arr)
     }
     Console.Write(" ] ");
 }
-string [] array = new string [6] {"they", "are", "not", "stupid", "idiots", "no"};
-Console.WriteLine("Исходный массив:");
-Console.WriteLine ("");
-PrintArray (array);
-Console.WriteLine ("");
 
 void CreateFillAndPrintNewArray (string [] arr)
 {   
@@ -41,6 +36,11 @@ void CreateFillAndPrintNewArray (string [] arr)
     
     PrintArray(arr2);
 }
+string [] array = new string [6] {"they", "are", "not", "stupid", "idiots", "no"};
+Console.WriteLine("Исходный массив:");
+Console.WriteLine ("");
+PrintArray (array);
+Console.WriteLine ("");
 Console.WriteLine("");
 Console.WriteLine("Сформированный массив:");
 Console.WriteLine("");
