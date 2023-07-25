@@ -1,2 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string [] array = new string [6] {"if", "slame", "tap", "global", "supreme", "OK"};
