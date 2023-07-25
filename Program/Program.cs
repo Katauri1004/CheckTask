@@ -10,7 +10,7 @@ void PrintArray (string [] arr)
     }
     Console.Write(" ] ");
 }
-string [] array = new string [6] {"dfssdf", "slame", "tapfds", "global", "supreme", "OfdsfsdK"};
+string [] array = new string [6] {"they", "are", "not", "stupid", "idiots", "no"};
 PrintArray (array);
 
 void CreateFillAndPrintNewArray (string [] arr)
