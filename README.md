@@ -3,11 +3,16 @@
 
 ## Описание работы программы
 
->string [] array = new string [6] {"they", "are", "not",   "stupid", "idiots", "no"};
+1. Вводим с клавиатуры массив с указанием размера и элементов.
+```
+string [] array = new string [6] {"they", "are", "not",   "stupid", "idiots", "no"};
+```
 
  
-   Вводим с клавиатуры массив с указанием размера и элементов.
-`void PrintArray (string [] arr)
+2. Выводим данный массив на экран при помощи метода PrintArray, который последовательно выводит каждый элемент массива в консоль
+
+```
+void PrintArray (string [] arr)
 {
     Console.Write(" [ ");
     for (int i = 0; i < arr.Length; i++) 
@@ -17,4 +22,64 @@
     }
     Console.Write(" ] ");
 }
-`
+```
+3. При помощи метода CreateFillAndPrintNewArray(array), формируем новый массив с соблюдением заданных требований : элементы нового массива должны состоять только из трех или менее символов.
+```
+void CreateFillAndPrintNewArray (string [] arr)
+{   
+    int size = 0;
+    for (int j = 0; j< arr.Length; j++)
+    {
+        if (arr[j].Length<=3)
+        {
+            size++;
+        }
+    }
+    int IndArr2 = 0;
+    string [] arr2 = new string [size];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length<=3)
+        {
+            arr2[IndArr2] = arr[i];
+            IndArr2++;
+            
+        }
+    }
+    
+    PrintArray(arr2);
+}
+```
+3.1 В первом цикле метода определяем размер нового массива, просчитывая элементы исходного массива, где количество символов меньше либо равно 3
+```
+int size = 0;
+    for (int j = 0; j< arr.Length; j++)
+    {
+        if (arr[j].Length<=3)
+        {
+            size++;
+        }
+    }
+```
+
+
+
+
+
+
+
+
+3.3 Во втором цикле метода мы заполняем новый массив элементами, двигаясь по старому, проверяя условие что в элементе 3 символа либо меньше. Для движения по элементам нового массива используем переменную IndArr2
+
+```
+for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length<=3)
+        {
+            arr2[IndArr2] = arr[i];
+            IndArr2++;
+            
+        }
+    }
+``` 
